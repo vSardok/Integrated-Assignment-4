@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <div id="interface"></div>
+
+        <script src="interface.js"></script>
+
+        <!-- Payment Modal -->
+        <div
+            class="modal fade"
+            id="PaymentModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">
+                            Choose Your Payment Method
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3 mb-3">
+                                        <label for="p1" class="d-block mx-auto">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="Pay With Paypal" class="d-block mx-auto" width="50px">
+                                        </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="p2" class="d-block mx-auto">
+                                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-visa-credit-debit-bank-transaction-card-32265.png" alt="Pay With Visa" class="d-block mx-auto" width="50px">
+                                        </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="p3" class="d-block mx-auto">
+                                            <img src="https://brand.mastercard.com/etc/designs/mccom/brandcenter-es/jcr:content/global/logo.img.png/1616622999741.png" alt="Pay With MasterCard" class="d-block mx-auto" width="50px">
+                                        </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="p4" class="d-block mx-auto">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/oxxo.svg" alt="Pay With Oxxo" class="d-block mx-auto" width="50px">
+                                        </label>
+                                    </div>
+                                </div>
+                                <input type="radio" name="PaymentOption" id="p1" class="hidden">
+                                <input type="radio" name="PaymentOption" id="p2" class="hidden">
+                                <input type="radio" name="PaymentOption" id="p3" class="hidden">
+                                <input type="radio" name="PaymentOption" id="p4" class="hidden">
+                                <div id="PayWithPayPal" class="hidden">
+                                    <p>Pay With Paypal</p>
+                                    <input type="text" class="form-control mt-3" placeholder="Email address or phone number"/>
+                                    <input type="password" class="form-control mt-3" placeholder="Password"/>
+                                </div>
+                                <div id="PayWithCard" class="hidden">
+                                    <p id="Visa" class="hidden">Pay With Visa</p>
+                                    <p id="MasterCard" class="hidden">Pay With MasterCard</p>
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text"> Card Number: </span>
+                                        <input type="text" class="form-control" placeholder="Card Number"/>
+                                    </div>
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text"> Owner Name: </span>
+                                        <input type="text" class="form-control" placeholder="Owner Name"/>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-1"></div>
+                                        <div class="col-3"><p>Due Date:</p></div>                                            
+                                        <div class="col-4">
+                                            <label for="month">Month:&nbsp;</label>
+                                            <select id="month" name="month" required>
+                                                <option value=""></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="year">Year:&nbsp;</label>
+                                            <select id="year" name="year" required>
+                                                <option value=""></option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                                <option value="2031">2031</option>
+                                                <option value="2032">2032</option>
+                                                <option value="2033">2033</option>
+                                                <option value="2034">2034</option>
+                                                <option value="2035">2035</option>
+                                                <option value="2036">2036</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="input-group mt-3">
+                                        <span class="input-group-text"> Security Code: </span>
+                                        <input type="password" class="form-control" placeholder="CVV"/>
+                                    </div>
+                                </div>
+                                <div id="PayInOxxo" class="hidden">
+                                    <p>Pay With Oxxo</p>
+                                    <p>Go to your nearest Oxxo and pay the following order number</p>
+                                    <input type="text" class="form-control mt-3" value="2647 8456 2579 5428 2484" readonly/>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        data-bs-dismiss="modal"
+                    >   <!-- If I need to make the Payment useful, I must remove the line above this comment -->
+                        Confirm Payment Method
+                    </button>   
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Style Add-ons -->
+        <style>
+            
+            .hidden{
+                display: none;
+            }
+
+            input#p1:checked ~ div#PayWithPayPal, input#p2:checked ~ div#PayWithCard, input#p2:checked ~ div#PayWithCard #Visa, input#p3:checked ~ div#PayWithCard, input#p3:checked ~ div#PayWithCard #MasterCard, input#p4:checked ~ div#PayInOxxo{
+                display: contents;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+
+        <h1 class="m-3"> Product List </h1>
+        <div id="cart"></div>
+        <script src="cart.js"></script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
