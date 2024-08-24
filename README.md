@@ -1,4 +1,5 @@
 Web Development Assignment - ITESO
+
 This repository contains my final individual assignment from my Web Development course at ITESO. It showcases some of my front-end capabilities, primarily for educational purposes. Please note that the payment methods included are purely illustrative and not functional.
 
 Feel free to explore the GitHub Pages and interact with the database.
