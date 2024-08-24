@@ -4,4 +4,4 @@ This repository contains my final individual assignment from my Web Development 
 
 Feel free to explore the GitHub Pages and interact with the database.
 
-For a more comprehensive demonstration of my web development skills, including both front-end and back-end work, please check out my final project, which is available in my teammate's repository: https://github.com/LuisSantana-Repository/proyecto-web-Calendario-estudiantil-. Please note that the deployment is no longer active due to maintenance constraints.
+For a more comprehensive demonstration of my web development skills, including both front-end and back-end work, please check out my final project, which is available in my teammate's repository: https://github.com/LuisSantana-Repository/FisrtNodeProyect_Schedule. Please note that the deployment is no longer active due to maintenance constraints.
